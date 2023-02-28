@@ -28,7 +28,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   }
   
-  input[type="text"] {
+  input[type="text"], input[type="number"] {
     display: block;
     margin: 0 auto;
     padding: 10px;
