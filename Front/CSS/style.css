@@ -9,13 +9,15 @@
   }  
   h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
   }  
   p {
     text-align: justify;
     padding: 10px;
   }
+  
   .container {
+    border: 1px solid rgb(127, 227, 162);
     border-radius: 10px;
     background-color: white;
     max-width: max-content;
