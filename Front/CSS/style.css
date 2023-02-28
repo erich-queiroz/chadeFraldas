@@ -1,19 +1,16 @@
 * {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
+  }  
   body {
     margin: 0;
     padding: 0;
     background-color: #c6ffcc;
-  }
-  
+  }  
   h1 {
     text-align: center;
     margin-top: 50px;
-  }
-  
+  }  
   p {
     text-align: justify;
     padding: 10px;
@@ -26,9 +23,9 @@
     width: 40em;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-  }
-  
+  }  
   input[type="text"], input[type="number"] {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: block;
     margin: 0 auto;
     padding: 10px;
@@ -36,8 +33,22 @@
     border-radius: 5px;
     border: none;
     margin-bottom: 20px;
-  }
-  
+  }  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+}
+img {
+  width: 40%;
+  margin: auto;
+  display: block;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 5px;
+}
   button {
     display: block;
     margin: 0 auto;
@@ -49,24 +60,20 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-  }
-  
+  }  
   button:hover {
     background-color: #3e8e41;
-  }
-  
+  }  
   h2 {
     text-align: center;
     margin-top: 50px;
-  }
-  
+  }  
   ul {
     list-style: none;
     margin: 0 auto;
     padding: 0;
     width: 50%;
-  }
-  
+  }  
   li {
     display: flex;
     justify-content: space-between;
@@ -75,13 +82,11 @@
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-  }
-  
+  }  
   a {
     color: #4CAF50;
     text-decoration: none;
-  }
-  
+  }  
   a:hover {
     text-decoration: underline;
   }
@@ -90,29 +95,24 @@
       max-width: 100%;
       width: 90%;
       padding: 5px;
-    }
-    
-    input[type="text"] {
+    }    
+    input[type="text"], input[type="number"] {
       width: 100%;
     }
-    
     button {
       width: 100%;
     }
-    
     ul {
       width: 100%;
     }
   }
   @media screen and (max-width: 450px) {
-    input[type="text"] {
+    input[type="text"], input[type="number"] {
       width: 100%;
     }
-    
     button {
       width: 100%;
     }
-    
     ul {
       width: 100%;
     }
@@ -120,16 +120,13 @@
   @media screen and (max-width: 600px) {
     .container {
       width: 90%;
-    }
-    
-    input[type="text"] {
+    }    
+    input[type="text"], input[type="number"] {
       width: 80%;
-    }
-    
+    }    
     button {
       width: 80%;
-    }
-    
+    }    
     ul {
       width: 80%;
     }
