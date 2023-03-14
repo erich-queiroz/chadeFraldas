@@ -11,9 +11,22 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
 
-  const lista
+  const lista: Cadastro[] = [
+    {
+      id: 1,
+      nome: "Assis",
+      descricao: "Fraldas",
+      valor: 100.0
+    },
+    {
+      id: 2,
+      nome: "Deyse",
+      descricao: "Chupeta",
+      valor: 212.34      
+    }
+  ];
 
-  res.send('Lista dos cadastros');
+  res.send(lista);
 });
 
-module.exports.deafult = router;
+export default router;

@@ -1,8 +1,9 @@
 
 type Cadastro = {
-    id?: number;
-    nome: string;
-    descricao: string;
+    id?: Number;
+    nome: String;
+    descricao: String;
+    valor: Number;
 }
 
 export default Cadastro;
