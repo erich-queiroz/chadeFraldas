@@ -1,17 +1,22 @@
 import express, { NextFunction, Request, Response } from 'express';
 
-import Cadastro from '../models/cadastro-model';
+import Presente from '../models/presente-model';
 
 const router = express.Router();
 
 router.post('/', (req: Request, res: Response, next: NextFunction) => {
 
-  res.send('Post do cadastro');
+  const presente: Presente = req.body;
+
+  res.status(201)
+     .location(`/${presente.id}`)
+     .json(presente)
+     .send();
 });
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
 
-  const lista: Cadastro[] = [
+  const lista: Presente[] = [
     {
       id: 1,
       nome: "Assis",
@@ -26,7 +31,7 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
     }
   ];
 
-  res.send(lista);
+  res.json(lista);
 });
 
 export default router;

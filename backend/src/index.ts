@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import indexRouter from './routes/index';
-import cadastroRouter from './routes/cadastro-routes';
+import presenteRouter from './routes/presente-routes';
 
 dotenv.config();
 
@@ -26,7 +26,7 @@ app.use(
 );
 
 app.use('/', indexRouter);
-app.use('/cadastro', cadastroRouter);
+app.use('/cadastro', presenteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req: Request, res: Response, next: NextFunction) {
