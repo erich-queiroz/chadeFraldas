@@ -10,6 +10,13 @@ const repository = {
         database.run(sql, params, function(_err) {
             callback(this?.lastID);
         });
+    },
+
+    getAll: (callback: (presentes: unknown[]) => void) => {
+        const sql = "SELECT * FROM Presente";
+        const params: any[] = [];
+
+        database.all(sql, params, (_err, rows) => callback(rows));
     }
 };
 

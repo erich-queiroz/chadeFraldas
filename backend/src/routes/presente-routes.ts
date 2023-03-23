@@ -13,7 +13,7 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
   repository.create(presente, (id) => {
     if(id) {
       res.status(201)
-         .location(`/${presente.id}`)
+         .location(`/${id}`)
          .json(presente)
          .send();
 
@@ -26,23 +26,7 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
 });
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-
-  const lista: Presente[] = [
-    {
-      id: 1,
-      nome: "Assis",
-      descricao: "Fraldas",
-      valor: 100.0
-    },
-    {
-      id: 2,
-      nome: "Deyse",
-      descricao: "Chupeta",
-      valor: 212.34      
-    }
-  ];
-
-  res.json(lista);
+  repository.getAll((presentes) => res.json);
 });
 
 export default router;
