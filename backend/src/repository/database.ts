@@ -21,7 +21,7 @@ const database = new sqlite3.Database(DBSOURCE, (err) => {
 
         database.run(CREATE_TABLE_PRESENTE, (err) => {
             if(err) {
-                console.error("Falha na criação da tabela");
+                console.error("Falha na criação da tabela ou a tabela já existe");
             } else {
                 console.log("Tabela criada!");
             }

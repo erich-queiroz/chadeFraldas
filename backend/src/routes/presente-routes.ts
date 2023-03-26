@@ -12,6 +12,8 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
 
   repository.create(presente, (id) => {
     if(id) {
+      presente.id = id;
+
       res.status(201)
          .location(`/${id}`)
          .json(presente)
@@ -26,7 +28,7 @@ router.post('/', (req: Request, res: Response, next: NextFunction) => {
 });
 
 router.get('/', (req: Request, res: Response, next: NextFunction) => {
-  repository.getAll((presentes) => res.json);
+  repository.getAll((presentes) => res.json(presentes));
 });
 
 export default router;
